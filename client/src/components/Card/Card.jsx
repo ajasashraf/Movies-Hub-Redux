@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 export default function Card() {
   const movies = useSelector((state) => state.search.movies);
@@ -53,29 +53,28 @@ const Box = (props) => {
   const IMGPATH = "https://image.tmdb.org/t/p/w1280";
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
-  <a href="#">
-    <img
-      className="rounded-t-lg w-full"
-      src={IMGPATH + props.image}
-      alt=""
-    />
-  </a>
-  <div className="p-5">
-    <a href="#">
-      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        {props.title}
-      </h5>
-    </a>
-  </div>
-  <div className="flex justify-center mb-2">
-    <a
-      href="#"
-      className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-    >
-      Read more
-    </a>
-  </div>
-</div>
-
+      <a href="#">
+        <img
+          className="rounded-t-lg w-full"
+          src={IMGPATH + props.image}
+          alt=""
+        />
+      </a>
+      <div className="p-5">
+        <a href="#">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {props.title}
+          </h5>
+        </a>
+      </div>
+      <div className="flex justify-center mb-2">
+        <a
+          href="#"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+        >
+          Read more
+        </a>
+      </div>
+    </div>
   );
-}
+};

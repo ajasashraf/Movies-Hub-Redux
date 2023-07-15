@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import "./SearchBar.css";
 import Card from "../Card/Card";
@@ -21,7 +21,7 @@ const HomePage = () => {
     axios
       .get(SEARCHAPI + searchItem)
       .then((res) => {
-        dispatch({ type: 'SET_MOVIES', payload: res.data.results });
+        dispatch({ type: "SET_MOVIES", payload: res.data.results });
       })
       .catch((err) => console.log(err));
   };
